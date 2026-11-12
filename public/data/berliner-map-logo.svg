@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 286" fill="none" role="img" aria-label="Berliner Map logo: short gray TV tower with colorful hollow globe">
+  <defs>
+    <clipPath id="sphere"><circle cx="128" cy="140" r="81"/></clipPath>
+  </defs>
+  <!-- Minimal gray antenna -->
+  <path d="M125 29h6v19h-6zM121 48h14v8h-14zM118 57h20v5h-20z" fill="#92979D"/>
+  <!-- Colored wireframe globe; no fill -->
+  <g clip-path="url(#sphere)" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Soviet: right half -->
+    <g stroke="#DC4444">
+      <path d="M128 59 A81 81 0 0 1 128 221"/>
+      <path d="M128 59 C176 83 176 197 128 221"/>
+      <path d="M128 59V221"/>
+      <path d="M128 88 Q172 88 198 107"/>
+      <path d="M128 140H209"/>
+      <path d="M128 192 Q172 192 198 173"/>
+    </g>
+    <!-- American: upper-left -->
+    <g stroke="#3478D4">
+      <path d="M128 59 A81 81 0 0 0 47 140"/>
+      <path d="M128 59 C80 83 80 109 80 140"/>
+      <path d="M128 59V140"/>
+      <path d="M56 107 Q84 88 128 88"/>
+      <path d="M47 140H128"/>
+    </g>
+    <!-- British: middle-left -->
+    <g stroke="#278653">
+      <path d="M47 140 A81 81 0 0 0 70 195"/>
+      <path d="M80 140 C80 161 86 181 100 199"/>
+      <path d="M47 140H128"/>
+      <path d="M49 171 Q85 164 128 164"/>
+    </g>
+    <!-- French: lower-left -->
+    <g stroke="#884DBB">
+      <path d="M70 195 A81 81 0 0 0 128 221"/>
+      <path d="M100 199 Q112 217 128 221"/>
+      <path d="M128 164V221"/>
+      <path d="M70 195 Q94 191 128 192"/>
+    </g>
+  </g>
+  <!-- Very short gray mast under globe -->
+  <path d="M121 224h14v7h-14zM124 231h8l3 25h-14z" fill="#92979D"/>
+</svg>

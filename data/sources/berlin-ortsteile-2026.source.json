@@ -1,0 +1,12 @@
+{
+  "publisher": "Geoportal Berlin",
+  "dataset": "ALKIS Berlin Ortsteile",
+  "retrieved_date": "2026-11-11",
+  "geographic_epoch": "modern, not 1945",
+  "feature_count": 97,
+  "crs": "EPSG:25833",
+  "sha256": "0a832cea5cdc912c658e5c988ee9ab428559f4ee7ee5039874a4b10c664ff45f",
+  "metadata_url": "https://gdi.berlin.de/geonetwork/srv/api/records/0a7c53a5-b29d-3f45-9734-1c811045e6c2",
+  "license": "Datenlizenz Deutschland Zero 2.0",
+  "license_url": "https://www.govdata.de/dl-de/zero-2-0"
+}

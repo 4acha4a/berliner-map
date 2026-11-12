@@ -1,0 +1,98 @@
+services:
+  postgres:
+    image: postgis/postgis:16-3.5
+    platform: linux/amd64
+    environment:
+      POSTGRES_DB: berliner_map
+      POSTGRES_USER: berliner
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-berliner}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U berliner -d berliner_map"]
+      interval: 5s
+      timeout: 5s
+      retries: 15
+    restart: unless-stopped
+
+  backend:
+    build: ./backend
+    environment:
+      DATABASE_URL: postgresql+psycopg://berliner:${POSTGRES_PASSWORD:-berliner}@postgres:5432/berliner_map
+      PYTHONPATH: /app
+      WATCHFILES_FORCE_POLLING: "true"
+    command:
+      [
+        "sh",
+        "-c",
+        "alembic upgrade head && python -m app.import_sectors /data/berlin-sectors.geojson --manifest /data/berlin-sectors.provenance.json && exec uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload --reload-dir /app/app",
+      ]
+    volumes:
+      - ./public/data:/data:ro
+      - ./backend:/app:ro
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health', timeout=5)",
+        ]
+      interval: 10s
+      timeout: 6s
+      retries: 10
+      start_period: 20s
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+    environment:
+      BACKEND_URL: http://backend:8000
+      NODE_ENV: development
+      NEXT_TELEMETRY_DISABLED: "1"
+      NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: ${NEXT_PUBLIC_GOOGLE_MAPS_API_KEY:-}
+      WATCHPACK_POLLING: "true"
+    volumes:
+      - ./app:/app/app:ro
+      - ./components:/app/components:ro
+      - ./lib:/app/lib:ro
+      - ./public:/app/public:ro
+      - ./scripts:/app/scripts:ro
+      - ./tests:/app/tests:ro
+      - ./package.json:/app/package.json:ro
+      - ./package-lock.json:/app/package-lock.json:ro
+      - ./next.config.ts:/app/next.config.ts:ro
+      - ./postcss.config.mjs:/app/postcss.config.mjs:ro
+      - ./tsconfig.json:/app/tsconfig.json:ro
+      - ./eslint.config.mjs:/app/eslint.config.mjs:ro
+      - frontend_dev_next:/app/.next
+    ports:
+      - "3000:3000"
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:3000/api/v1/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 15s
+      timeout: 6s
+      retries: 5
+      start_period: 15s
+    restart: unless-stopped
+
+volumes:
+  frontend_dev_next:
+  postgres_data:

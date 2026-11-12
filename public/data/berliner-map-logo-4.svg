@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" role="img" aria-label="Berliner Map geometric Fernsehturm logo">
+  <defs>
+    <clipPath id="globeClip">
+      <circle cx="128" cy="128" r="76"/>
+    </clipPath>
+  </defs>
+
+  <!-- Geometric Fernsehturm mast -->
+  <g fill="#8E949B">
+    <rect x="124" y="12" width="8" height="28" rx="2"/>
+    <rect x="117" y="40" width="22" height="12" rx="3"/>
+    <path d="M108 52h40c2.2 0 4 1.8 4 4v10h-48V56c0-2.2 1.8-4 4-4z"/>
+    <path d="M115 208h26v10h-26z"/>
+    <path d="M121 218h14l6 26h-26l6-26z"/>
+  </g>
+
+  <!-- Hollow globe made only from colored meridian/latitude lines -->
+  <g clip-path="url(#globeClip)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <!-- outer colored circumference sections -->
+    <path d="M128 52A76 76 0 0 1 128 204" stroke="#D94747"/>
+    <path d="M128 52A76 76 0 0 0 74.26 74.26" stroke="#8951BB"/>
+    <path d="M74.26 74.26A76 76 0 0 0 52 128" stroke="#3478D4"/>
+    <path d="M52 128A76 76 0 0 0 128 204" stroke="#288654"/>
+
+    <!-- central vertical split -->
+    <path d="M128 52V204" stroke="#D94747"/>
+
+    <!-- red right-side meridians + latitudes -->
+    <path d="M128 52C170 76 170 180 128 204" stroke="#D94747"/>
+    <path d="M128 82Q170 82 194 100" stroke="#D94747"/>
+    <path d="M128 128H204" stroke="#D94747"/>
+    <path d="M128 174Q170 174 194 156" stroke="#D94747"/>
+
+    <!-- blue upper-left grid -->
+    <path d="M128 52C91 72 86 102 86 128" stroke="#3478D4"/>
+    <path d="M62 100Q89 82 128 82" stroke="#3478D4"/>
+    <path d="M52 128H128" stroke="#3478D4"/>
+
+    <!-- green lower-left grid -->
+    <path d="M86 128C86 154 91 184 128 204" stroke="#288654"/>
+    <path d="M52 128H128" stroke="#288654" opacity="0.9"/>
+    <path d="M62 156Q89 174 128 174" stroke="#288654"/>
+
+    <!-- purple accent sector on upper-left -->
+    <path d="M74 74Q98 60 128 60" stroke="#8951BB"/>
+    <path d="M98 74Q88 94 84 112" stroke="#8951BB"/>
+  </g>
+</svg>

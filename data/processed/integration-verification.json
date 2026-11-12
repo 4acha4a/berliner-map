@@ -1,0 +1,52 @@
+{
+  "dataset_sha256": "9143fa5e998fcfbf698874ef019e138b12bb5b1fb874823abfce60d88b9b54e9",
+  "accuracy": "approximate",
+  "coverage": "partial; Staaken excluded",
+  "idempotency": "passed; stable IDs on repeat import",
+  "stored_geometry_equals_source": true,
+  "api_direct_and_proxy": "passed",
+  "locality_checks": [
+    {
+      "locality": "Mitte",
+      "lat": 52.52212481963285,
+      "lng": 13.400861929665426,
+      "expected": "soviet",
+      "result": "passed",
+      "coordinate_basis": "Representative interior point of official modern locality; not an address"
+    },
+    {
+      "locality": "Tempelhof",
+      "lat": 52.465232376490775,
+      "lng": 13.39355329242868,
+      "expected": "american",
+      "result": "passed",
+      "coordinate_basis": "Representative interior point of official modern locality; not an address"
+    },
+    {
+      "locality": "Charlottenburg",
+      "lat": 52.51564652661912,
+      "lng": 13.309656818769362,
+      "expected": "british",
+      "result": "passed",
+      "coordinate_basis": "Representative interior point of official modern locality; not an address"
+    },
+    {
+      "locality": "Reinickendorf",
+      "lat": 52.57395244654838,
+      "lng": 13.340421251216583,
+      "expected": "french",
+      "result": "passed",
+      "coordinate_basis": "Representative interior point of official modern locality; not an address"
+    },
+    {
+      "locality": "Staaken",
+      "lat": 52.53450126919407,
+      "lng": 13.142495947198789,
+      "expected": null,
+      "result": "passed",
+      "coordinate_basis": "Representative interior point of official modern locality; not an address"
+    }
+  ],
+  "outside_0_0": "null",
+  "caution": "Broad historical borough assignments only; not independent verification of exact boundary coordinates."
+}

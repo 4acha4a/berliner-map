@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+.env*
+!.env.example
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+
+backend/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/

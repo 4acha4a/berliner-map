@@ -1,0 +1,9 @@
+{
+  "verified": true,
+  "sha256": "9143fa5e998fcfbf698874ef019e138b12bb5b1fb874823abfce60d88b9b54e9",
+  "reference_date": "1945-09-01",
+  "source_name": "Approximate 1945 sector reconstruction / Geoportal Berlin, ALKIS Berlin Ortsteile (modern proxy; Staaken excluded)",
+  "source_url": "https://gdi.berlin.de/services/wfs/alkis_ortsteile?service=WFS&version=2.0.0&request=GetFeature&typeNames=alkis_ortsteile%3Aortsteile&srsName=EPSG%3A25833&outputFormat=application%2Fjson",
+  "license": "Datenlizenz Deutschland - Zero - Version 2.0; https://www.govdata.de/dl-de/zero-2-0",
+  "verification_notes": "APPROXIMATE MVP RELEASE REVIEW (2026-11-11), not a verification of exact 1945 lines. Official ALKIS source/license and geometry checked; broad borough-to-sector assignment cross-checked against official statistical history and GHDI September 1 1945 reference map. Modern geographic proxies retained. Entire Staaken locality excluded (10.882761 km2); coverage is PARTIAL. Gatow/Seeburger Zipfel and later exchanges/enclaves remain uncertain. Not for building/address-level historical classification. User explicitly authorized this approximation and Staaken exclusion. Source-derived coverage difference and sector interior overlap are zero; unchanged importer validation passed."
+}

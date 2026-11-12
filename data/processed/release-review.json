@@ -1,0 +1,23 @@
+{
+  "dataset_sha256": "9143fa5e998fcfbf698874ef019e138b12bb5b1fb874823abfce60d88b9b54e9",
+  "review_date": "2026-11-11",
+  "release_scope": "User-authorized approximate MVP only; partial historical coverage",
+  "exact_1945_geometry_verified": false,
+  "modern_source_license_verified": true,
+  "broad_historical_sector_arrangement_cross_checked": true,
+  "coordinates_copied_from_historical_reference_map": false,
+  "all_four_codes_present": true,
+  "intentional_exclusion": "Entire Staaken, 10.882761 km2",
+  "unresolved": [
+    "Exact Gatow/Seeburger Zipfel perimeter",
+    "West/East Staaken split",
+    "Later exchanges and enclaves",
+    "Exact historical outer and internal edges"
+  ],
+  "positive_area_overlap_m2": 0,
+  "declared_modern_proxy_coverage_missing_m2": 0,
+  "declared_modern_proxy_coverage_excess_m2": 0,
+  "independent_1945_coverage_validated": false,
+  "building_level_use_supported": false,
+  "production_importer_changed": false
+}

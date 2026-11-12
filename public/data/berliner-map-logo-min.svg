@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 512 512"
+   fill="none"
+   role="img"
+   aria-label="Geometric Fernsehturm logo"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="berliner-map-logo-min.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.0885389"
+     inkscape:cx="239.31161"
+     inkscape:cy="237.47429"
+     inkscape:window-width="1512"
+     inkscape:window-height="858"
+     inkscape:window-x="0"
+     inkscape:window-y="33"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <g
+     stroke="#000000"
+     stroke-width="10"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="g8"
+     transform="matrix(1.4229951,0,0,1.0993275,-111.04275,-18.394163)">
+    <!-- top antenna -->
+    <path
+       d="M 253.9607,22.60173 V 125.13599"
+       id="path1"
+       style="stroke-width:11.6152" />
+    <!-- upper head / platform -->
+    <path
+       d="m 245.38969,128.79822 h 18 l 5,33 h -28 z"
+       id="path2" />
+    <path
+       d="m 232,157 h 48"
+       id="path4" />
+    <!-- sphere -->
+    <circle
+       cx="256"
+       cy="212"
+       r="49"
+       id="circle4" />
+    <path
+       d="m 212.79201,209.76245 c 28.11499,11.12852 61.07738,11.12852 89.19236,0"
+       id="path5"
+       style="stroke-width:9.90358" />
+    <!-- lower ring -->
+    <!-- main tower legs -->
+    <path
+       d="m 240.62144,261.06332 c 1,78 -3,162 -28,217"
+       id="path7" />
+    <path
+       d="m 273.54292,259.68373 c -1,78 3,162 28,217"
+       id="path8" />
+  </g>
+</svg>

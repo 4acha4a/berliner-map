@@ -1,0 +1,594 @@
+{
+  "mode": "approximate",
+  "release_verified": false,
+  "missing_boroughs": [],
+  "versions": {
+    "geopandas": "1.2.0",
+    "pyproj": "3.8.0",
+    "proj": "9.8.1",
+    "shapely": "2.2.0"
+  },
+  "unresolved_exception": true,
+  "enclaves_reviewed": false,
+  "coverage_difference": {
+    "missing_m2": 0.0,
+    "excess_m2": 0.0
+  },
+  "transformations": [
+    {
+      "source": "locality-aggregation-proxies.geojson",
+      "sha256": "d819a2be3d534f14592959bdf02537af80c23b812aed52bcba3ca8cedbc9907a",
+      "source_crs": "EPSG:25833",
+      "source_name": "Approximate 1945 sector reconstruction / Geoportal Berlin, ALKIS Berlin Ortsteile (modern proxy; Staaken excluded)",
+      "source_url": "https://gdi.berlin.de/services/wfs/alkis_ortsteile?service=WFS&version=2.0.0&request=GetFeature&typeNames=alkis_ortsteile%3Aortsteile&srsName=EPSG%3A25833&outputFormat=application%2Fjson",
+      "license": "Datenlizenz Deutschland - Zero - Version 2.0; https://www.govdata.de/dl-de/zero-2-0",
+      "target_crs": "EPSG:4326",
+      "always_xy": true,
+      "operation": "Inverse of UTM zone 33N + ETRS89 to WGS 84 (1) (with axis order normalized for visualization)",
+      "definition": "proj=pipeline step inv proj=utm zone=33 ellps=GRS80 step proj=unitconvert xy_in=rad xy_out=deg"
+    },
+    {
+      "source": "declared-modern-proxy-coverage.geojson",
+      "sha256": "6de5a7e7ffeefc8af746ad40cf7de8a1678266842f2d9be37562f3981e4f7f00",
+      "source_crs": "EPSG:25833",
+      "source_name": "Approximate 1945 sector reconstruction / Geoportal Berlin, ALKIS Berlin Ortsteile (modern proxy; Staaken excluded)",
+      "source_url": "https://gdi.berlin.de/services/wfs/alkis_ortsteile?service=WFS&version=2.0.0&request=GetFeature&typeNames=alkis_ortsteile%3Aortsteile&srsName=EPSG%3A25833&outputFormat=application%2Fjson",
+      "license": "Datenlizenz Deutschland - Zero - Version 2.0; https://www.govdata.de/dl-de/zero-2-0",
+      "target_crs": "EPSG:4326",
+      "always_xy": true,
+      "operation": "Inverse of UTM zone 33N + ETRS89 to WGS 84 (1) (with axis order normalized for visualization)",
+      "definition": "proj=pipeline step inv proj=utm zone=33 ellps=GRS80 step proj=unitconvert xy_in=rad xy_out=deg"
+    }
+  ],
+  "input_evidence": {
+    "reference_date": "1945-09-01",
+    "accuracy": "approximate",
+    "assignment_evidence_url": "https://www.statistischebibliothek.de/mir/servlets/MCRFileNodeServlet/BBMonografie_derivate_00000068/100jahregrossberlin.pdf",
+    "uncertainty_notes": "Historical boundaries are reconstructed and may differ from their exact 1945 locations. Modern ALKIS locality edges are geographic proxies, not verified 1945 linework. Entire modern Staaken locality excluded: both British East Staaken and Soviet-zone West Staaken remain unclassified. Gatow/Seeburger Zipfel exchange outline remains unresolved; modern Gatow/Kladow edges retained only as approximate proxies. Later exchanges, Steinstuecken corridor, eastern city-limit additions and small internal boundary shifts are not reversed. Not suitable for building/address-level historical classification, especially near boundaries.",
+    "excluded_coverage_notes": "Entire modern Staaken locality omitted; no claim of complete 1945 coverage.",
+    "enclaves_reviewed": false,
+    "boroughs": {
+      "path": "locality-aggregation-proxies.geojson",
+      "sha256": "d819a2be3d534f14592959bdf02537af80c23b812aed52bcba3ca8cedbc9907a",
+      "crs": "EPSG:25833",
+      "source_name": "Approximate 1945 sector reconstruction / Geoportal Berlin, ALKIS Berlin Ortsteile (modern proxy; Staaken excluded)",
+      "source_url": "https://gdi.berlin.de/services/wfs/alkis_ortsteile?service=WFS&version=2.0.0&request=GetFeature&typeNames=alkis_ortsteile%3Aortsteile&srsName=EPSG%3A25833&outputFormat=application%2Fjson",
+      "license": "Datenlizenz Deutschland - Zero - Version 2.0; https://www.govdata.de/dl-de/zero-2-0",
+      "historically_reviewed": false,
+      "reviewed_for_approximation": true,
+      "accuracy": "approximate",
+      "redistribution_permitted": true,
+      "review_notes": "Historical boundaries are reconstructed and may differ from their exact 1945 locations. Modern ALKIS locality edges are geographic proxies, not verified 1945 linework. Entire modern Staaken locality excluded: both British East Staaken and Soviet-zone West Staaken remain unclassified. Gatow/Seeburger Zipfel exchange outline remains unresolved; modern Gatow/Kladow edges retained only as approximate proxies. Later exchanges, Steinstuecken corridor, eastern city-limit additions and small internal boundary shifts are not reversed. Not suitable for building/address-level historical classification, especially near boundaries."
+    },
+    "coverage": {
+      "path": "declared-modern-proxy-coverage.geojson",
+      "sha256": "6de5a7e7ffeefc8af746ad40cf7de8a1678266842f2d9be37562f3981e4f7f00",
+      "crs": "EPSG:25833",
+      "source_name": "Approximate 1945 sector reconstruction / Geoportal Berlin, ALKIS Berlin Ortsteile (modern proxy; Staaken excluded)",
+      "source_url": "https://gdi.berlin.de/services/wfs/alkis_ortsteile?service=WFS&version=2.0.0&request=GetFeature&typeNames=alkis_ortsteile%3Aortsteile&srsName=EPSG%3A25833&outputFormat=application%2Fjson",
+      "license": "Datenlizenz Deutschland - Zero - Version 2.0; https://www.govdata.de/dl-de/zero-2-0",
+      "historically_reviewed": false,
+      "reviewed_for_approximation": true,
+      "accuracy": "approximate",
+      "redistribution_permitted": true,
+      "review_notes": "Historical boundaries are reconstructed and may differ from their exact 1945 locations. Modern ALKIS locality edges are geographic proxies, not verified 1945 linework. Entire modern Staaken locality excluded: both British East Staaken and Soviet-zone West Staaken remain unclassified. Gatow/Seeburger Zipfel exchange outline remains unresolved; modern Gatow/Kladow edges retained only as approximate proxies. Later exchanges, Steinstuecken corridor, eastern city-limit additions and small internal boundary shifts are not reversed. Not suitable for building/address-level historical classification, especially near boundaries."
+    },
+    "gatow_staaken": {
+      "status": "unresolved",
+      "notes": "Historical boundaries are reconstructed and may differ from their exact 1945 locations. Modern ALKIS locality edges are geographic proxies, not verified 1945 linework. Entire modern Staaken locality excluded: both British East Staaken and Soviet-zone West Staaken remain unclassified. Gatow/Seeburger Zipfel exchange outline remains unresolved; modern Gatow/Kladow edges retained only as approximate proxies. Later exchanges, Steinstuecken corridor, eastern city-limit additions and small internal boundary shifts are not reversed. Not suitable for building/address-level historical classification, especially near boundaries."
+    },
+    "raw_source_sha256": "0a832cea5cdc912c658e5c988ee9ab428559f4ee7ee5039874a4b10c664ff45f",
+    "locality_mapping": [
+      {
+        "locality": "Hellersdorf",
+        "official_code": "110000101005",
+        "aggregation_label": "Lichtenberg"
+      },
+      {
+        "locality": "Mahlsdorf",
+        "official_code": "110000101004",
+        "aggregation_label": "Lichtenberg"
+      },
+      {
+        "locality": "Kaulsdorf",
+        "official_code": "110000101003",
+        "aggregation_label": "Lichtenberg"
+      },
+      {
+        "locality": "Hansaviertel",
+        "official_code": "110000010103",
+        "aggregation_label": "Tiergarten"
+      },
+      {
+        "locality": "Gesundbrunnen",
+        "official_code": "110000010106",
+        "aggregation_label": "Wedding"
+      },
+      {
+        "locality": "Wedding",
+        "official_code": "110000010105",
+        "aggregation_label": "Wedding"
+      },
+      {
+        "locality": "Mitte",
+        "official_code": "110000010101",
+        "aggregation_label": "Mitte"
+      },
+      {
+        "locality": "Moabit",
+        "official_code": "110000010102",
+        "aggregation_label": "Tiergarten"
+      },
+      {
+        "locality": "Tiergarten",
+        "official_code": "110000010104",
+        "aggregation_label": "Tiergarten"
+      },
+      {
+        "locality": "Kreuzberg",
+        "official_code": "110000020202",
+        "aggregation_label": "Kreuzberg"
+      },
+      {
+        "locality": "Friedrichshain",
+        "official_code": "110000020201",
+        "aggregation_label": "Friedrichshain"
+      },
+      {
+        "locality": "Französisch Buchholz",
+        "official_code": "110000030310",
+        "aggregation_label": "Pankow"
+      },
+      {
+        "locality": "Wilhelmsruh",
+        "official_code": "110000030313",
+        "aggregation_label": "Pankow"
+      },
+      {
+        "locality": "Rosenthal",
+        "official_code": "110000030312",
+        "aggregation_label": "Pankow"
+      },
+      {
+        "locality": "Niederschönhausen",
+        "official_code": "110000030311",
+        "aggregation_label": "Pankow"
+      },
+      {
+        "locality": "Blankenburg",
+        "official_code": "110000030303",
+        "aggregation_label": "Pankow"
+      },
+      {
+        "locality": "Heinersdorf",
+        "official_code": "110000030304",
+        "aggregation_label": "Pankow"
+      },
+      {
+        "locality": "Buch",
+        "official_code": "110000030309",
+        "aggregation_label": "Pankow"
+      },
+      {
+        "locality": "Weißensee",
+        "official_code": "110000030302",
+        "aggregation_label": "Weißensee"
+      },
+      {
+        "locality": "Stadtrandsiedlung Malchow",
+        "official_code": "110000030306",
+        "aggregation_label": "Weißensee"
+      },
+      {
+        "locality": "Karow",
+        "official_code": "110000030305",
+        "aggregation_label": "Pankow"
+      },
+      {
+        "locality": "Prenzlauer Berg",
+        "official_code": "110000030301",
+        "aggregation_label": "Prenzlauer Berg"
+      },
+      {
+        "locality": "Blankenfelde",
+        "official_code": "110000030308",
+        "aggregation_label": "Pankow"
+      },
+      {
+        "locality": "Pankow",
+        "official_code": "110000030307",
+        "aggregation_label": "Pankow"
+      },
+      {
+        "locality": "Westend",
+        "official_code": "110000040405",
+        "aggregation_label": "Charlottenburg"
+      },
+      {
+        "locality": "Charlottenburg",
+        "official_code": "110000040401",
+        "aggregation_label": "Charlottenburg"
+      },
+      {
+        "locality": "Halensee",
+        "official_code": "110000040407",
+        "aggregation_label": "Wilmersdorf"
+      },
+      {
+        "locality": "Wilmersdorf",
+        "official_code": "110000040402",
+        "aggregation_label": "Wilmersdorf"
+      },
+      {
+        "locality": "Charlottenburg-Nord",
+        "official_code": "110000040406",
+        "aggregation_label": "Charlottenburg"
+      },
+      {
+        "locality": "Schmargendorf",
+        "official_code": "110000040403",
+        "aggregation_label": "Wilmersdorf"
+      },
+      {
+        "locality": "Grunewald",
+        "official_code": "110000040404",
+        "aggregation_label": "Wilmersdorf"
+      },
+      {
+        "locality": "Wilhelmstadt",
+        "official_code": "110000050509",
+        "aggregation_label": "Spandau"
+      },
+      {
+        "locality": "Haselhorst",
+        "official_code": "110000050502",
+        "aggregation_label": "Spandau"
+      },
+      {
+        "locality": "Siemensstadt",
+        "official_code": "110000050503",
+        "aggregation_label": "Spandau"
+      },
+      {
+        "locality": "Hakenfelde",
+        "official_code": "110000050507",
+        "aggregation_label": "Spandau"
+      },
+      {
+        "locality": "Kladow",
+        "official_code": "110000050506",
+        "aggregation_label": "Spandau"
+      },
+      {
+        "locality": "Falkenhagener Feld",
+        "official_code": "110000050508",
+        "aggregation_label": "Spandau"
+      },
+      {
+        "locality": "Gatow",
+        "official_code": "110000050505",
+        "aggregation_label": "Spandau"
+      },
+      {
+        "locality": "Spandau",
+        "official_code": "110000050501",
+        "aggregation_label": "Spandau"
+      },
+      {
+        "locality": "Schlachtensee",
+        "official_code": "110000060608",
+        "aggregation_label": "Zehlendorf"
+      },
+      {
+        "locality": "Lankwitz",
+        "official_code": "110000060603",
+        "aggregation_label": "Steglitz"
+      },
+      {
+        "locality": "Nikolassee",
+        "official_code": "110000060606",
+        "aggregation_label": "Zehlendorf"
+      },
+      {
+        "locality": "Lichterfelde",
+        "official_code": "110000060602",
+        "aggregation_label": "Steglitz"
+      },
+      {
+        "locality": "Wannsee",
+        "official_code": "110000060607",
+        "aggregation_label": "Zehlendorf"
+      },
+      {
+        "locality": "Steglitz",
+        "official_code": "110000060601",
+        "aggregation_label": "Steglitz"
+      },
+      {
+        "locality": "Dahlem",
+        "official_code": "110000060605",
+        "aggregation_label": "Zehlendorf"
+      },
+      {
+        "locality": "Zehlendorf",
+        "official_code": "110000060604",
+        "aggregation_label": "Zehlendorf"
+      },
+      {
+        "locality": "Marienfelde",
+        "official_code": "110000070705",
+        "aggregation_label": "Tempelhof"
+      },
+      {
+        "locality": "Lichtenrade",
+        "official_code": "110000070706",
+        "aggregation_label": "Tempelhof"
+      },
+      {
+        "locality": "Tempelhof",
+        "official_code": "110000070703",
+        "aggregation_label": "Tempelhof"
+      },
+      {
+        "locality": "Mariendorf",
+        "official_code": "110000070704",
+        "aggregation_label": "Tempelhof"
+      },
+      {
+        "locality": "Schöneberg",
+        "official_code": "110000070701",
+        "aggregation_label": "Schöneberg"
+      },
+      {
+        "locality": "Friedenau",
+        "official_code": "110000070702",
+        "aggregation_label": "Schöneberg"
+      },
+      {
+        "locality": "Rudow",
+        "official_code": "110000080804",
+        "aggregation_label": "Neukölln"
+      },
+      {
+        "locality": "Buckow",
+        "official_code": "110000080803",
+        "aggregation_label": "Neukölln"
+      },
+      {
+        "locality": "Britz",
+        "official_code": "110000080802",
+        "aggregation_label": "Neukölln"
+      },
+      {
+        "locality": "Neukölln",
+        "official_code": "110000080801",
+        "aggregation_label": "Neukölln"
+      },
+      {
+        "locality": "Gropiusstadt",
+        "official_code": "110000080805",
+        "aggregation_label": "Neukölln"
+      },
+      {
+        "locality": "Grünau",
+        "official_code": "110000090913",
+        "aggregation_label": "Köpenick"
+      },
+      {
+        "locality": "Niederschöneweide",
+        "official_code": "110000090905",
+        "aggregation_label": "Treptow"
+      },
+      {
+        "locality": "Rahnsdorf",
+        "official_code": "110000090912",
+        "aggregation_label": "Köpenick"
+      },
+      {
+        "locality": "Köpenick",
+        "official_code": "110000090910",
+        "aggregation_label": "Köpenick"
+      },
+      {
+        "locality": "Oberschöneweide",
+        "official_code": "110000090909",
+        "aggregation_label": "Köpenick"
+      },
+      {
+        "locality": "Friedrichshagen",
+        "official_code": "110000090911",
+        "aggregation_label": "Köpenick"
+      },
+      {
+        "locality": "Altglienicke",
+        "official_code": "110000090906",
+        "aggregation_label": "Treptow"
+      },
+      {
+        "locality": "Müggelheim",
+        "official_code": "110000090914",
+        "aggregation_label": "Köpenick"
+      },
+      {
+        "locality": "Schmöckwitz",
+        "official_code": "110000090915",
+        "aggregation_label": "Köpenick"
+      },
+      {
+        "locality": "Baumschulenweg",
+        "official_code": "110000090903",
+        "aggregation_label": "Treptow"
+      },
+      {
+        "locality": "Johannisthal",
+        "official_code": "110000090904",
+        "aggregation_label": "Treptow"
+      },
+      {
+        "locality": "Adlershof",
+        "official_code": "110000090907",
+        "aggregation_label": "Treptow"
+      },
+      {
+        "locality": "Alt-Treptow",
+        "official_code": "110000090901",
+        "aggregation_label": "Treptow"
+      },
+      {
+        "locality": "Bohnsdorf",
+        "official_code": "110000090908",
+        "aggregation_label": "Treptow"
+      },
+      {
+        "locality": "Plänterwald",
+        "official_code": "110000090902",
+        "aggregation_label": "Treptow"
+      },
+      {
+        "locality": "Marzahn",
+        "official_code": "110000101001",
+        "aggregation_label": "Lichtenberg"
+      },
+      {
+        "locality": "Biesdorf",
+        "official_code": "110000101002",
+        "aggregation_label": "Lichtenberg"
+      },
+      {
+        "locality": "Falkenberg",
+        "official_code": "110000111104",
+        "aggregation_label": "Lichtenberg"
+      },
+      {
+        "locality": "Alt-Hohenschönhausen",
+        "official_code": "110000111110",
+        "aggregation_label": "Lichtenberg"
+      },
+      {
+        "locality": "Lichtenberg",
+        "official_code": "110000111103",
+        "aggregation_label": "Lichtenberg"
+      },
+      {
+        "locality": "Fennpfuhl",
+        "official_code": "110000111111",
+        "aggregation_label": "Lichtenberg"
+      },
+      {
+        "locality": "Karlshorst",
+        "official_code": "110000111102",
+        "aggregation_label": "Lichtenberg"
+      },
+      {
+        "locality": "Rummelsburg",
+        "official_code": "110000111112",
+        "aggregation_label": "Lichtenberg"
+      },
+      {
+        "locality": "Malchow",
+        "official_code": "110000111106",
+        "aggregation_label": "Lichtenberg"
+      },
+      {
+        "locality": "Neu-Hohenschönhausen",
+        "official_code": "110000111109",
+        "aggregation_label": "Lichtenberg"
+      },
+      {
+        "locality": "Wartenberg",
+        "official_code": "110000111107",
+        "aggregation_label": "Lichtenberg"
+      },
+      {
+        "locality": "Friedrichsfelde",
+        "official_code": "110000111101",
+        "aggregation_label": "Lichtenberg"
+      },
+      {
+        "locality": "Hermsdorf",
+        "official_code": "110000121206",
+        "aggregation_label": "Reinickendorf"
+      },
+      {
+        "locality": "Heiligensee",
+        "official_code": "110000121204",
+        "aggregation_label": "Reinickendorf"
+      },
+      {
+        "locality": "Borsigwalde",
+        "official_code": "110000121211",
+        "aggregation_label": "Reinickendorf"
+      },
+      {
+        "locality": "Waidmannslust",
+        "official_code": "110000121207",
+        "aggregation_label": "Reinickendorf"
+      },
+      {
+        "locality": "Konradshöhe",
+        "official_code": "110000121203",
+        "aggregation_label": "Reinickendorf"
+      },
+      {
+        "locality": "Frohnau",
+        "official_code": "110000121205",
+        "aggregation_label": "Reinickendorf"
+      },
+      {
+        "locality": "Märkisches Viertel",
+        "official_code": "110000121210",
+        "aggregation_label": "Reinickendorf"
+      },
+      {
+        "locality": "Wittenau",
+        "official_code": "110000121209",
+        "aggregation_label": "Reinickendorf"
+      },
+      {
+        "locality": "Lübars",
+        "official_code": "110000121208",
+        "aggregation_label": "Reinickendorf"
+      },
+      {
+        "locality": "Reinickendorf",
+        "official_code": "110000121201",
+        "aggregation_label": "Reinickendorf"
+      },
+      {
+        "locality": "Tegel",
+        "official_code": "110000121202",
+        "aggregation_label": "Reinickendorf"
+      }
+    ]
+  },
+  "assignment_table": {
+    "Reinickendorf": "french",
+    "Wedding": "french",
+    "Spandau": "british",
+    "Tiergarten": "british",
+    "Charlottenburg": "british",
+    "Wilmersdorf": "british",
+    "Steglitz": "american",
+    "Zehlendorf": "american",
+    "Neukölln": "american",
+    "Schöneberg": "american",
+    "Tempelhof": "american",
+    "Kreuzberg": "american",
+    "Pankow": "soviet",
+    "Prenzlauer Berg": "soviet",
+    "Mitte": "soviet",
+    "Treptow": "soviet",
+    "Köpenick": "soviet",
+    "Weißensee": "soviet",
+    "Friedrichshain": "soviet",
+    "Lichtenberg": "soviet"
+  },
+  "assignment_reference": "https://www.statistischebibliothek.de/mir/servlets/MCRFileNodeServlet/BBMonografie_derivate_00000068/100jahregrossberlin.pdf",
+  "adjustment_evidence": [],
+  "sector_codes": [
+    "american",
+    "british",
+    "french",
+    "soviet"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "reference_date": "1945-09-01",
+  "assignment_evidence_url": "https://www.statistischebibliothek.de/mir/servlets/MCRFileNodeServlet/BBMonografie_derivate_00000068/100jahregrossberlin.pdf",
+  "uncertainty_notes": "REQUIRED: document positional accuracy, reconstructed segments, source conflicts, and limitations.",
+  "enclaves_reviewed": false,
+  "boroughs": {
+    "path": "../sources/historical-boroughs.geojson",
+    "sha256": "",
+    "crs": "",
+    "source_name": "",
+    "source_url": "",
+    "license": "",
+    "review_notes": "",
+    "historically_reviewed": false,
+    "redistribution_permitted": false
+  },
+  "gatow_staaken": {
+    "status": "unresolved",
+    "notes": "Dated exchange outlines and occupation versus municipal administration treatment not yet verified."
+  },
+  "coverage": null
+}
